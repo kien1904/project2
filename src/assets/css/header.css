@@ -1,0 +1,39 @@
+.header-body{
+    background-color: #C6E5F4;
+}
+.header-detail {
+    display: flex;
+   
+}
+.header-detail .header-left{
+    display: flex;
+    list-style: none;
+
+}
+.header-detail .header-left li img {
+    padding-right: 28px;
+    width: 85px;
+    margin-top: 15px;
+
+}
+.header-left .header-left-title{
+    margin-top: 30px;
+    font-size: 26px;
+}
+.header-detail .header-right{
+    position: absolute;
+    right: 0;
+    list-style: none;
+}
+.header-right img{
+    margin-top: 23px;
+    padding-right: 20px;
+    width: 62px;
+} 
+@media (max-width:992px) {
+    .header-left .header-left-title{
+        font-size: 18px;
+    }
+    
+}
+

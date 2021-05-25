@@ -1,0 +1,50 @@
+
+.content-shop{
+    display: flex;
+    margin-bottom: 15px;
+}
+.content-shop-right{
+    display: flex;
+    flex-direction: column;
+}
+.content-shop-left img{
+    padding-right: 10px;
+}
+.content-body{
+    margin-top: 25px;
+    
+}
+.content-shop-right-name{
+    font-size: 22px !important;
+    font-weight: 400;
+
+}
+.content-shop-right-price{
+    font-size: 26px !important;
+    margin-top: 10px;
+    font-weight: 600;
+
+}
+.content-shop-right-rate{
+    font-size: 24px;
+}
+
+@media (max-width:992px) {
+    .content-shop-right-name{
+        font-size: 16px !important;
+
+    }
+    .content-shop-right-price{
+        font-size: 16px !important;
+
+    }
+    .content-shop-right-rate{
+        font-size: 12px;
+    }
+    .content-shop-right{
+        padding-left: 20px;
+    }
+    .content-shop-left img{
+        width: 60px;
+    }
+}

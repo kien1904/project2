@@ -1,0 +1,72 @@
+.body-login{
+    background: linear-gradient(180deg, #01AEEF 0%, #0093E9 100%);
+    height: auto;
+    margin-bottom: 0;
+    /* color: white !important; */
+}
+.body-logo{
+    /* position: absolute; */
+    
+    background-color: white;
+    border-radius: 100%;
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 56px;
+}
+.body-logo img{
+    padding: 10px 12px 12px 10px;
+}
+.body-item{
+    text-align: center !important;
+    padding-bottom: 32px;
+}
+.body-form{
+    margin-top: 67px;
+}
+.body-input{
+    padding: 22px;
+}
+
+.body-input .body-icon{
+    padding-right: 10px;
+}
+.body-save{
+    position: relative;
+    margin-top: 56px;
+}
+.body-save .body-password{
+    position: absolute;
+    right:0
+}
+.body-save .set-size {
+    color: white !important;
+    font-size: 14px;
+}
+/* .body-item{} */
+.body-btn {
+    text-align: center;
+    margin-top: 5px;
+}
+.body-btn .body-submit{
+    padding:10px  109px 32px 109px ;
+    border-radius: 2%;
+    border: 1px solid white;
+    opacity: 0.95;
+    color: white !important;
+
+
+}
+.body-register{
+    margin-top: 0px;
+}
+ .body-text{
+    color: white !important;
+}
+.body-register .body-link{
+    color: black;
+}
+.footer{
+    text-align: center;
+    margin-top: 72px;
+    margin-bottom: 100px;
+}
