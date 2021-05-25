@@ -4,7 +4,8 @@ const UserSlice=createSlice({
     initialState:{
         users:[],
         userLogin:{},
-        isLogin:false
+        isLogin:false,
+        load:true
     },
     reducers:{
         CheckDataOnServer:(state,action)=>{
@@ -14,6 +15,7 @@ const UserSlice=createSlice({
             if(check){
                 state.isLogin=true
                 state.usersLogin=check
+                
             }
         },
         sendDataToServer:(state,action)=>{
@@ -29,6 +31,7 @@ const UserSlice=createSlice({
         },
         logout:(state,action)=>{
             state.isLogin=false
+            state.load=false
         }
     }
 })
@@ -36,4 +39,5 @@ export const UserReducer=UserSlice.reducer
 export const userSelector=state=>state.user.users
 export const LoginSelector=state=>state.user.userLogin
 export const checkSelector=state=>state.user.isLogin
+export const loadSelector=state=>state.user.load
 export const {sendDataToServer,CheckDataOnServer,logout}=UserSlice.actions

@@ -6,13 +6,14 @@ import { useDispatch, useSelector } from "react-redux";
 import "../../assets/css/profile.css";
 import moment from 'moment'
 import { Redirect, useHistory } from "react-router";
-import { LoginSelector, logout } from "../../assets/store/reducers/UserSlice";
+import { loadSelector, LoginSelector, logout } from "../../assets/store/reducers/UserSlice";
 const {Title}=Typography
 const {Option}=Select
 const Profile = () => {
 //   const user = useSelector(userSlect);
   // console.log(user)
   const user=useSelector(LoginSelector)
+  const load=useSelector(loadSelector)
   const history=useHistory()
   const dispatch=useDispatch()
  

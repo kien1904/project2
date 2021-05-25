@@ -19,11 +19,12 @@ const DetailShop = () => {
     message.success('them thanh cong',3)
 
   }
+ console.log(data.img)
 
   
 
   return (
-    data?.img?
+    
     <div className="detail-shop">
       <Col xs={4} sm={4} md={6} lg={6}>
        
@@ -53,7 +54,7 @@ const DetailShop = () => {
         </div>
         
       </Col>
-    </div>: <div className="detail-shop"></div>
+    </div>
   );
 };
 

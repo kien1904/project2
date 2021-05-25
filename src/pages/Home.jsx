@@ -15,44 +15,49 @@ import App from '../routers/App';
 import { useSelector } from 'react-redux';
 
 import SearchData from './Content/Search';
-import { checkSelector } from '../assets/store/reducers/UserSlice';
+import { checkSelector, loadSelector } from '../assets/store/reducers/UserSlice';
 
 
 const Home = () => {
     const check=useSelector(checkSelector)
-    
+    const load=useSelector(loadSelector)
 
 
     return (
         <div>
             
             <Router>
-              <Route exact path="/" component={Login}></Route>
+
+                
+            {load===false && check===false ?<Route exact path="/" component={Login}></Route>:(
+                <>
+                <HeaderM/>
+                 
+                    
+                 <Row>
+                 <Col xs={8} sm={8} md={6} lg={4} >
+                
+                  <><SliderM/></>
+              
+                     
+                 </Col>
+                 <Col xs={16} sm={16} md={18} lg={20} className="shop">
+                     
+                         <Route exact path="/home" component={Shop}></Route>
+                         <Route exact path="/cart" component={Cart}></Route>
+                         <Route   path="/detailShop/:id" component={Detail}></Route>
+                         <Route exact path="/profile" component={Profile}></Route>
+                         <Route exact path="/search" component={SearchData}></Route>
+             
+                 </Col>
+         
+             </Row>
+           
+                </>
+            )}    
                 
                
-                 {check===false?'':(
-                     <><HeaderM/></>
-                 )}
-                    
-                    <Row>
-                    <Col xs={8} sm={8} md={6} lg={4} >
-                    {check===false?'':(
-                     <><SliderM/></>
-                 )}
-                        
-                    </Col>
-                    <Col xs={16} sm={16} md={18} lg={20} className="shop">
-                        
-                            <Route exact path="/home" component={Shop}></Route>
-                            <Route exact path="/cart" component={Cart}></Route>
-                            <Route  exact path="/detailShop/:id" component={Detail}></Route>
-                            <Route exact path="/profile" component={Profile}></Route>
-                            <Route exact path="/search" component={SearchData}></Route>
-                
-                    </Col>
-            
-                </Row>
-              
+                   
 
 
 
