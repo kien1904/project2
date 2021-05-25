@@ -23,6 +23,7 @@ const DetailShop = () => {
   
 
   return (
+    data?.img?
     <div className="detail-shop">
       <Col xs={4} sm={4} md={6} lg={6}>
        
@@ -52,7 +53,7 @@ const DetailShop = () => {
         </div>
         
       </Col>
-    </div>
+    </div>: <div className="detail-shop"></div>
   );
 };
 
